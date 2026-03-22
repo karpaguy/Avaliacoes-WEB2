@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './Forms.css';
-import TextField from "../FormsComponents/TextField/TextField";
+import Field from "../FormsComponents/Field/Field";
 import Dropdown from "../FormsComponents/Dropdown/Dropdown";
 import Button from "../Button/Button";
 
@@ -13,7 +13,8 @@ const Forms = (props) => {
     const onSave = (e) => {
         e.preventDefault();
 
-        props.onAddProduct(itemSection,{
+        props.onAddProduct({
+            "section": itemSection,
             "brand": itemBrand,
             "name": itemName,
             "price": itemPrice 
@@ -29,8 +30,8 @@ const Forms = (props) => {
             <form onSubmit={onSave}>
                 <Dropdown label="Seção:" value={itemSection} items={props.sectionArea} onChange={(e) => setItemSection(e.target.value)}/>
                 <Dropdown label="Marca:" value={itemBrand} items={props.brandsArea} onChange={(e) => setItemBrand(e.target.value)}></Dropdown>
-                <TextField label="Nome:" value={itemName} placeholder="Texto" onChange={(e) => setItemName(e.target.value)}></TextField>
-                <TextField label="Valor:" value={itemPrice} placeholder="Texto" onChange={(e) => setItemPrice(e.target.value)}></TextField>
+                <Field type="text" label="Nome:" value={itemName} placeholder="Nome" onChange={(e) => setItemName(e.target.value)}></Field>
+                <Field type="number" label="Valor:" value={itemPrice} placeholder="0" onChange={(e) => setItemPrice(e.target.value)}></Field>
                 <Button>Cadastrar Item</Button>
             </form>
         </div>

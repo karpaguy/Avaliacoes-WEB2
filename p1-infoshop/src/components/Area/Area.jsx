@@ -4,11 +4,8 @@ import Item from "../Item/Item";
 
 const Area = (props) => {
     return (
-        // const css = { backgroundColor: props.corSecundaria} → Exemplo didático.
-
         (props.items.length > 0) ? <section className="area" style={{backgroundColor:props.primaryColor}}>
-            <h3>{props.nome}</h3>
-            {/* style={ {borderColor: props.corPrimaria } } */}
+            <h3>{props.name}</h3>
             <div className="items">
                 {props.items.map((item) => <Item
                     key={item.name}

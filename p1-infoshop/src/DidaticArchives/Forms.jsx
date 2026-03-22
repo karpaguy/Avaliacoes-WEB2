@@ -14,6 +14,7 @@ const Forms = (props) => {
         e.preventDefault();
 
         props.onAddProduct(itemSection,{
+            "itemSection":
             "brand": itemBrand,
             "name": itemName,
             "price": itemPrice 

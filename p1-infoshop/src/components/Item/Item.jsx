@@ -1,7 +1,7 @@
 import React from "react";
 import './Item.css';
 
-const Item = (brand, name, price) => {
+const Item = ({brand, name, price}) => {
     return (
         <div className="item">
             <p className="brand">{brand}</p>

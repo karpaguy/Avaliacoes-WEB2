@@ -33,44 +33,23 @@ function App() {
   ]
   const brands = ["HP", "Positivo", "Dell", "Xing Ling", "Asus"];
   const sectionNames = sections.map(section => section.name);
+  const [items, setItems] = useState([]);
 
-  // Por questões didática, manterei assim. Na prática, useStae(sections) dá no mesmo.
-  const [sectionsData, setSectionsData] = useState(
-    sections.map(section => ({...section}))
-  )
-
-  const addItem = (sectionName, item) => {
-    const newSectionsData = sectionsData.map(section => {
-      if (section.name === sectionName) {
-        return {
-          ...section,
-          items: [...section.items, item]
-        };
-      }
-      return section;
-    });
-  
-    setSectionsData(newSectionsData);
+  const addItem = (item) => {
+    setItems(prev => [...prev, item])
   }
 
   return (
     <>
-      <Forms sectionArea={sectionNames} brandsArea={brands} onAddProduct={(section, item) => addItem(section, item)}/>
-      {sectionsData.map((section) => <Area
-      key={section.name}
-      primaryColor={section.primaryColor}
-      items={section.items}
+      <Forms sectionArea={sectionNames} brandsArea={brands} onAddProduct={(item) => addItem(item)}/>
+      {sections.map((area) => <Area
+      key={area.name}
+      name={area.name}
+      primaryColor={area.primaryColor}
+      items={items.filter(item => item.section === area.name)}
       />)}
-
     </>
   )
 }
-
-      // {areas.map((area) => <Area key={area.nome}
-      // nome={area.nome}
-      // corPrimaria={area.corPrimaria}
-      // corSecundaria={area.corSecundaria}
-      // professores={professores.filter(prof => prof.area == area.nome)}
-      // />)}
 
 export default App
