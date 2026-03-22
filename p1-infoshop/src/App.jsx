@@ -52,7 +52,7 @@ function App() {
       <section className="items-area">
         <div className="navbar">
           <Button key="Todos">Todos</Button>
-          {sections.map((area) => <Button key={area.name}>{area.name}</Button>)}
+          {sections.map((area) => <Button key={area.name} variant="off">{area.name}</Button>)}
         </div>
         <div className="items">
           {sections.map((area) =>
