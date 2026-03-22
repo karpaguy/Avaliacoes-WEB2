@@ -1,9 +1,9 @@
 import React from "react";
 import './Field.css';
 
-const TextField = (props) => {
+const Field = (props) => {
     return (
-        <div className="text-field">
+        <div className="field">
             <label>{props.label}</label>
             <input type={props.type}
             value={props.value}
@@ -14,4 +14,5 @@ const TextField = (props) => {
     )
 }
 
-export default TextField;
+
+export default Field;

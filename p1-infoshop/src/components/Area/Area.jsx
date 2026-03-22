@@ -12,6 +12,7 @@ const Area = (props) => {
                     brand={item.brand}
                     name={item.name}
                     price={item.price}
+                    condition={item.condition}
                     /> )}
             </div>
         </section> : ''

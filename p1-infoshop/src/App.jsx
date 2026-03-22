@@ -38,7 +38,7 @@ function App() {
   const addItem = (item) => {
     setItems(prev => [...prev, item])
   }
-
+  
   return (
     <>
       <Forms sectionArea={sectionNames} brandsArea={brands} onAddProduct={(item) => addItem(item)}/>
@@ -48,6 +48,7 @@ function App() {
       primaryColor={area.primaryColor}
       items={items.filter(item => item.section === area.name)}
       />)}
+
     </>
   )
 }
