@@ -31,7 +31,7 @@ function App() {
       items: []
     }
   ]
-  const brands = ["HP", "Positivo", "Dell", "Xing Ling", "Asus"];
+  const brands = ["HP", "Positivo", "Dell", "XingLing", "Asus"];
   const sectionNames = sections.map(section => section.name);
   const [items, setItems] = useState([]);
 

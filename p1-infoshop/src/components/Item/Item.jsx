@@ -4,6 +4,8 @@ import './Item.css';
 const Item = ({brand, name, price, condition}) => {
     return (
         <div className="item">
+            <img src={`/brands/${brand}.png`} alt={brand} />
+
             <p className="brand">{brand}</p>
             <p className="name">{name}</p>
             <p className="price">{price}</p>
