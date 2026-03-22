@@ -1,0 +1,10 @@
+.dropdown-field select {
+    flex: 1;
+    min-width: 180px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #b0bccb;
+    background: #f5f7fa;
+    outline: none;
+    transition: 0.2s;
+}

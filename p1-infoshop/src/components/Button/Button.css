@@ -1,0 +1,22 @@
+.button {
+    background: #fff;
+    color: black;
+
+    border: 1px solid rgb(88, 186, 238);
+
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 0 var(--color-shadow), 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.15s ease-in-out;
+}
+
+.button.confirm {
+    background: linear-gradient(to bottom, #6cc04a, #4a9e2a);
+    border: 1px solid #3a801e;
+    color: white;
+}

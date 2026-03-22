@@ -1,0 +1,32 @@
+.area {
+  margin-bottom: 8px;
+}
+.area h3 {
+  padding: 8px;
+  margin-bottom: 2px;
+
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.section-computers {
+  background: linear-gradient(180deg, #e53935, #c62828);
+}
+.section-accessories {
+  background: linear-gradient(180deg, #fbc02d, #f9a825);
+}
+.section-printers {
+  background: linear-gradient(180deg, #42a5f5, #1e88e5);
+}
+.section-games {
+  background: linear-gradient(180deg, #43a047, #2e7d32);
+}
+.section-gadgets {
+  background: linear-gradient(180deg, #8e44ad, #6c3483);
+}
+
+.area .items {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}

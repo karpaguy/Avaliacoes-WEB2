@@ -16,6 +16,11 @@ const Forms = (props) => {
     const onSave = (e) => {
         e.preventDefault();
 
+        if(itemName.trim() == "" || itemPrice.trim() == "") {
+            alert("Campos obrigatórios não preenchidos.");
+            return;
+        }
+
         props.onAddProduct({
             "section": itemSection,
             "brand": itemBrand,
@@ -31,6 +36,7 @@ const Forms = (props) => {
 
     return (
         <div className="forms">
+            <h2>Adicionar Produto</h2>
             <form onSubmit={onSave}>
                 <Dropdown label="Seção:" value={itemSection} items={props.sectionArea} onChange={(e) => setItemSection(e.target.value)}/>
                 <Dropdown label="Marca:" value={itemBrand} items={props.brandsArea} onChange={(e) => setItemBrand(e.target.value)}></Dropdown>
@@ -40,7 +46,7 @@ const Forms = (props) => {
                     <RadioField value="Novo" name="condition" selectedValue={itemCondition} onChange={(e) => setItemCondition(e.target.value)}></RadioField>
                     <RadioField value="Usado" name="condition" selectedValue={itemCondition} onChange={(e) => setItemCondition(e.target.value)}></RadioField>
                 </div>
-                <Button>Cadastrar Item</Button>
+                <Button variant="confirm">Cadastrar Item</Button>
             </form>
         </div>
     ) 

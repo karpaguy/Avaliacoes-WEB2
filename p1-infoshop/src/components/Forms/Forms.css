@@ -1,0 +1,27 @@
+.forms {
+    background: linear-gradient(145deg, #dfe6ed, #c9d3df);
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 100%;
+}
+.forms h2 {
+    margin-bottom: 15px;
+    color: #2f4f6f;
+    border-bottom: 2px solid #b0bccb;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.forms form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.forms form .radio-area {
+    display: flex;
+    gap: 15px;
+}
